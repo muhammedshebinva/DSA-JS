@@ -1,0 +1,29 @@
+.name{
+    font-size: 100px;
+    color: #542609;
+}
+body{
+    background-color: antiquewhite;
+    text-align: center;
+}
+.left{
+    float: left;
+    width: 70vw;
+}
+.right{
+    float: right;
+    
+}
+img{
+    mix-blend-mode:multiply;
+    width: 400px;
+}
+h2{
+    color: #542609;
+    font-size: 60px;
+}
+#we{
+    font-style: italic;
+    font-family: cursive;
+    color: #8B5A2B;
+}
