@@ -7,8 +7,14 @@ console.log("a");
 
 setTimeout(()=> console.log("b"))
 
-["c","d"].forEach((element) => {
-    console.log(element);
-});
+// ["c","d"].forEach((element) => {
+//     console.log(element);
+// });
 
 console.log("e");
+
+console.log(123);
+
+let i=10;
+i=20;
+console.log(i);
