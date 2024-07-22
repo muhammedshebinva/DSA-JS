@@ -51,6 +51,7 @@ app.delete('/api/deleteuser/:id',(req,res)=>{
     console.log(id)
    
     const newUsers = users.filter((user)=>user.id!=id)
+    
     fs.writeFile('./users.json', JSON.stringify(newUsers), (err,data)=>{
         return res.json({status:'deleted',id: id})
     })
@@ -68,6 +69,20 @@ app.put('/api/user/update/:id',(req,res)=>{
         res.send('updated user id')
     })
     
+})
+
+app.patch('/api/user/updateone/:id', (req,res)=>{
+    const id = req.params.id;
+    console.log(id)
+    const body = req.body;
+    console.log(body)
+    const index = users.findIndex((user)=> user.id == id)
+    console.log(users[index])
+    users[index] = {...users[index],...body}
+
+    fs.writeFile('./users.json', JSON.stringify(users), (err,data)=>{
+        res.send('updated user id:')
+    })
 })
 
 
