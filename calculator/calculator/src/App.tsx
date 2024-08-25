@@ -18,31 +18,34 @@ function App() {
     <>
 <h2>Calculator</h2>
 
-<input id='input' value={inpVal} type='text'></input>
+<div className="calculator">
+    <div className="calculator__output">{inpVal}</div>
+    <div className="calculator__keys">
 
-<div className='grid-container'>
+        <button className="calculator__key calculator__key--operator">+</button>
+        <button className="calculator__key calculator__key--operator">-</button>
+        <button className="calculator__key calculator__key--operator">x</button>
+        <button className="calculator__key calculator__key--operator">/</button>
 
-<button className='grid-item' onClick={()=>handleNumberClick('1')} >1</button>
-<button className='grid-item' onClick={()=>handleNumberClick('2')}>2</button>
-<button className='grid-item' onClick={()=>handleNumberClick('3')}>3</button>
+        <button onClick={()=>handleNumberClick('1')} className="calculator_key">1</button>
+        <button onClick={()=>handleNumberClick('2')} className="calculator_key">2</button>
+        <button onClick={()=>handleNumberClick('3')} className="calculator_key">3</button>
+        <button onClick={()=>handleNumberClick('4')} className="calculator_key">4</button>
+        <button onClick={()=>handleNumberClick('5')} className="calculator_key">5</button>
+        <button onClick={()=>handleNumberClick('6')} className="calculator_key">6</button>
+        <button onClick={()=>handleNumberClick('7')} className="calculator_key">7</button>
+        <button onClick={()=>handleNumberClick('8')} className="calculator_key">8</button>
+        <button onClick={()=>handleNumberClick('9')} className="calculator_key">9</button>
+        <button onClick={()=>handleNumberClick('0')} className="calculator_key">0</button>
+        <button onClick={()=>handleNumberClick('.')} className="calculator_key">.</button>
+        <button onClick={()=>handleClearButton()} className="calculator_key">C</button>
 
-<button className='grid-item' onClick={()=>handleNumberClick('4')}>4</button>
-<button className='grid-item' onClick={()=>handleNumberClick('5')}>5</button>
-<button className='grid-item' onClick={()=>handleNumberClick('6')}>6</button>
+        <button className='calculator_key calculator__key--enter'>=</button>
 
-<button className='grid-item' onClick={()=>handleNumberClick('7')}>7</button>
-<button className='grid-item' onClick={()=>handleNumberClick('8')}>8</button>
-<button className='grid-item' onClick={()=>handleNumberClick('9')}>9</button>
+    </div>
 
-<button className='grid-item' onClick={()=>handleNumberClick('2')}>1</button>
-<button className='grid-item' onClick={()=>handleNumberClick('0')}>0</button>
-<button className='grid-item' onClick={()=>handleClearButton()}>clear</button>
 </div>
-
-
-
-
-        
+  
     </>
   )
 }
