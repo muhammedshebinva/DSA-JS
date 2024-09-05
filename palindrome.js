@@ -5,3 +5,9 @@ function palindrome(str){
 }
 
 console.log(palindrome("abcde"));
+
+function pali(str){
+    return str === str.split('').reverse().join('')
+}
+
+ console.log(pali("malayalam"));
