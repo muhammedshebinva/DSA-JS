@@ -18,3 +18,5 @@ console.log(123);
 let i=10;
 i=20;
 console.log(i);
+
+
